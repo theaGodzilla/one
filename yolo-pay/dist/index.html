@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>积分购买</title>
+    <style>
+        body{
+            background: #F8F8F8;
+            /* font-size: 0.12rem; */
+            font-family: 'Roboto-Bold';
+            /* display: none; */
+        }
+        #header{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            height: 4.2rem;
+            background-image: linear-gradient(90deg, #68D199 -20%, #80D46F 100%);
+        }
+        #header .integral{
+            flex: 1;
+            padding:0.1rem 0.3rem 0 .3rem;
+            display: flex;
+            justify-content: center;
+        }
+        #header .integral .int-big{
+            width: 3.3rem;
+            height: 3.3rem;
+            border-radius: 50%;
+            padding: 0.25rem;
+            background: rgba(255,255,255,0.20);
+        }
+        #header .integral .int-big .int-medium{
+            width: 2.8rem;
+            height: 2.8rem;
+            border-radius: 50%;
+            padding: 0.25rem;
+            background: rgba(255,255,255,0.20);
+        }
+        #header .integral .int-big .int-medium .int-small{
+            width: 2.28rem;
+            height: 2.28rem;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.20);
+            padding-top: 0.78rem;
+        }
+        #header .integral .int-big .int-medium .int-small .int-all{
+            height: 0.52rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #header .integral .int-big .int-medium .int-small .int-all .int-icon{
+            width: 0.36rem;
+            height: 0.36rem;
+            margin-right: 0.06rem;
+        }
+        #header .integral .int-big .int-medium .int-small .int-all .int-integral{
+            color: white;
+            font-size: 0.44rem;
+            font-weight: bold;
+        }
+        #header .integral .int-big .int-medium .int-small .int-title{
+            color: white;
+            font-size: 0.22rem;
+            text-align: center;
+            font-weight: 100;
+            margin-top: 0.14rem;
+            font-family: 'Roboto-Regular';
+            font-weight: normal;
+        }
+        #header .integral .history-icon{
+            width: 0.34rem;
+            height: 0.36rem;
+            position: absolute;
+            right: 0.3rem;
+        }
+    </style>
+    <script>
+        // (function(_D){
+        //     var _self = {};
+        //     _self.resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+        //     _self.Html = _D.getElementsByTagName("html")[0];
+        //     _self.widthProportion = function(){
+        //         var p = Number((_D.body&&_D.body.clientWidth||_self.Html.offsetWidth)/720).toFixed(3);
+        //         return p>1.067?1.067:p<0.444?0.444:p;
+        //     };
+        //     _self.changePage = function(){
+        //         _self.Html.setAttribute("style","font-size:"+_self.widthProportion()*100+"px");
+        //         _self.correctPx();
+        //     };
+        //     _self.correctPx = function(){
+        //         var docEl = document.documentElement;
+        //         var clientWidth = docEl.clientWidth;
+        //         if (!clientWidth || clientWidth > 768) return;
+        //         var div = document.createElement('div');
+        //         div.style.width = '1.4rem';
+        //         div.style.height = '0';
+        //         document.body.appendChild(div);
+        //         var ideal = 140 * clientWidth / 720;
+        //         var rmd = (div.clientWidth / ideal);
+        //         console.log(rmd);
+        //         if(rmd > 1.2 || rmd < 0.8){
+        //             docEl.style.fontSize = 100 * (clientWidth / 720) / rmd + 'px';
+        //             document.body.removeChild(div);
+        //         }
+        //     };
+        //     _self.changePage();
+        //     if (!document.addEventListener) return;
+        //     window.addEventListener(_self.resizeEvt,_self.changePage,false);
+        //     document.addEventListener('DOMContentLoaded', _self.changePage, false);
+        // })(document);
+    </script>
+</head>
+<body style="display:none">
+    <header id="header">
+        <div class="integral">
+            <div class="int-big">
+                <div class="int-medium">
+                    <div class="int-small">
+                        <div class="int-all">
+                            <img class="int-icon" src="./img/icon/xxhdpi/integralicon.png" alt="">
+                            <span class="int-integral" id="int-integral"></span>
+                        </div>
+                        <p class="int-title">Credits balance</p>
+                    </div>
+                </div>
+            </div>
+            <div class="buy-history">
+                <img id="history-icon" class="history-icon" src="./img/icon/xxhdpi/recordswhite.png" alt="">
+            </div>
+        </div>
+    </header>
+    <main id="main">
+        <ul class="integral-package" id="integral-package">
+            <!-- <li class="int-one">
+                <div class="int-num">
+                    <div class="ali-cen">
+                        <img class="int-num-icon" src="./img/icon/xhdpi/积分icon.png" alt="">
+                        <span class="int-num-all" id="int-num-all">10,000</span>
+                        <i class="int-num-unit">credits</i>
+                    </div>
+                </div>
+                <div class="int-price">
+                    <span class="int-price-spe">
+                        <i class="spe-icon">
+                            <img class="spe-icon-img" src="./img/icon/xhdpi/火.png" alt="">
+                        </i>
+                        <span>$0.99</span>
+                    </span>
+                    <span class="int-price-oripirce">$5.99</span>
+                </div>
+                <div class="int-pay">
+                    <span class="int-pay-tit" id="int-pay-tit">
+                        <p>PAY NOW</p>
+                        <p class="activity-time">
+                            <img src="./img/icon/xhdpi/倒计时.png">
+                            <span>35 days</span>
+                        </p>
+                    </span>
+                </div>
+                <img src="./img/icon/xhdpi/bonus.png" class="red-mark" alt="">
+            </li> -->
+        </ul>
+    </main>
+<script type="text/javascript" src="index.js"></script></body>
+</html>

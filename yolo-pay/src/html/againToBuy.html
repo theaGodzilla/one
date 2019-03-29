@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购买积分页重试</title>
+    <style>
+        body{
+            background: #F8F8F8;
+            font-family: 'Roboto-Bold';
+            font-size: 0.12rem;
+            height: 100%;
+            width: 100%;
+        }
+        #ground{
+            background-color: #fff;
+            position: fixed;
+            bottom: 0;
+            left: 0.3rem;
+            right: 0.3rem;
+            top: 0.2rem;
+            border-radius: 0.13rem 0.13rem 0 0;
+        }
+        #aga-main{
+            height: 0.975rem;
+        }
+        .line{
+            padding: 0 0.15rem;
+            border-bottom: 1px dashed #ECECEC;
+        }
+        #aga-main .aga-main-tit{
+            display: flex;
+            height: 0.975rem;
+            justify-content: center;
+            align-items: center;
+        }
+        #aga-main .aga-main-tit .aga-main-icon{
+            width: 0.37rem;
+            height: 0.35rem;
+            margin-right: 0.18rem;
+        }
+        #aga-main .aga-main-tit .aga-main-title{
+            font-size: 0.3rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="ground">
+        <div id="aga-main">
+            <div class="pd">
+                <div class="line">
+                    <div class="aga-main-tit" id="aga-main-tit">
+                        <img class="aga-main-icon" src="../img/icon/xxhdpi/订单失败.png" alt="">
+                        <h1 class="aga-main-title">Unusual Orders</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="againToBuy">
+                <ul class="spe-ul">
+                    <li class="">
+                        <div class="spe-ul-left">
+                            <div class="ul-left-top">
+                                <img class="top-icon" src="../img/icon/xxhdpi/integralicon.png" alt="">
+                                <span class="top-num">10000 credits</span>
+                            </div>
+                            <span class="bottom-time">2019-03-02 5:30</span>
+                        </div>
+                        <div class="spe-ul-retry">
+                            <span class="retry-top">RETRY</span>
+                            <span class="retry-bottom">Processing failure</span>
+                        </div>
+                    </li>
+                    <li class="">
+                        <div class="spe-ul-left">
+                            <div class="ul-left-top">
+                                <img class="top-icon" src="../img/icon/xxhdpi/integralicon.png" alt="">
+                                <span class="top-num">10000 credits</span>
+                            </div>
+                            <span class="bottom-time">2019-03-02 5:30</span>
+                        </div>
+                        <div class="spe-ul-complete">
+                            <span class="complete-top">DONE</span>
+                            <span class="complete-bottom">Finish</span>
+                        </div>
+                    </li>
+                    <li class="">
+                        <div class="spe-ul-left">
+                            <div class="ul-left-top">
+                                <img class="top-icon" src="../img/icon/xxhdpi/integralicon.png" alt="">
+                                <span class="top-num">10000 credits</span>
+                            </div>
+                            <span class="bottom-time">2019-03-02 5:30</span>
+                        </div>
+                        <div class="spe-ul-loading">
+                            <img class="loading-icon" src="../img/icon/Spinner-1s-200px.gif" alt="">
+                            <span class="complete-bottom">Processing…</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
